@@ -1,0 +1,4 @@
+<ul class="user-list">
+    <li><%= link_to  gravatar_for(user, size:50), user_path(user.id) %></li>
+    <li><%= link_to  user.name, user_path(user.id) %></li>
+</ul>

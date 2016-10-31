@@ -1,6 +1,6 @@
 class MicropostsController < ApplicationController
     # ログインしていない場合は/loginにリダイレクト
-    before_action :logged_in_user, onky: [:create]
+    before_action :logged_in_user, only: [:create]
     
     def create
         # 現在のユーザーに紐付いたMicropostのインスタンスを作成し変数へ代入
