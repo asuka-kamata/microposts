@@ -5,8 +5,7 @@ class UsersController < ApplicationController
   before_action :check_user, only:[:edit, :update]
   
   def show
-    #ユーザーに紐付いたマイクロソフトを作成日が新しいもの順に取得
-    @microposts = @user.microposts.order(created_at: :desc)
+    @microposts = @user.microposts.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
   end
   
   def new
