@@ -3,8 +3,10 @@
         <section class="user_info">
             <h1>
                 <%= gravatar_for @user %>
+                name : 
                 <%= @user.name %>
-                <%= @user.age %>
+                <br>
+                age : <%= @user.age %>
             </h1>
         </section>
         <section class="stats">
